@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <locale.h>
 	
-	// Variáveis Globais;
+	// VariÃ¡veis Globais;
 	void preencher();
 	char verifica(); char voltar;
 	char ganhador = 'c'; // C = Continuar;
@@ -12,54 +12,54 @@
 			
 void start(void){
 	
-	// Declaração das variáveis;
+	// DeclarÃ£o das variÃ¡veis;
 	int i, j, numero;
 	
 	// Montanto layout do jogo;
-	for(i=0; i < 9; i++){
+	for(i=0; i < 9; i++) {
 		preen[i] = i+'1';
 	}
 
-	while(ganhador == 'c'){
+	while(ganhador == 'c') {
 		
-		system("cls");
+//		system("cls");
 		
 		preencher(); // Montanto layout do jogo;
 		
 		// Entrada de dados - Pede onde vai ser escrito a jogada;
 		if(jogador == 0){ // Jogador 1;
-			printf("\t\t\t  Insira um número para X |_ "); 
+			printf("\t\t\t  Insira um nÃºmero para X |_ "); 
 		}else{ // Jogador 2;
-			printf("\t\t\t  Insira um número para O |_ ");
+			printf("\t\t\t  Insira um nÃºmero para O |_ ");
 		}
 			scanf("%i", &numero); // Entrada de dados - Pede o local a ser preenchido;
 		
-		// Verificação do local;
-		if(preen[numero-1] == 'x' || preen[numero-1] == 'O'){
-			printf("\t\t\t  Local já preenchido!! \n");
+		// VerificaÃ§Ã£o do local;
+		if(preen[numero-1] == 'x' || preen[numero-1] == 'O') {
+			printf("\t\t\t  Local jÃ¡ preenchido!! \n");
 			printf("\t\t\t  ");
 			system("pause");
-		}else{
+		}else {
 			// Jogando no local informado;
-			// numero-1 pois loop começa em 0;
-			if(jogador == 0){
+			// numero-1 pois loop comeÃ§a em 0;
+			if(jogador == 0) {
 				preen[numero-1] = 'x'; 
 				jogador++; // Passando a vez;
-			}else{
+			} else {
 				preen[numero-1] = 'O';
 				jogador--; // Passando a vez;
 			}
-			// Número fora do intervalo;
-			if(numero < 1 || numero > 9){ // Limitando peças;
-				printf("\t\t\t  Opção inválida!!\n");
+			// NÃºmero fora do intervalo;
+			if(numero < 1 || numero > 9){ // Limitando peÃ§as;
+				printf("\t\t\t  OpÃ§Ã£o invÃ¡lida!!\n");
 				printf("\t\t\t  ");
 				system("pause");
 			}
 		}
-		ganhador = verifica(); // Verificando se há ganhador;
+		ganhador = verifica(); // Verificando se hÃ¡ ganhador;
 	}
 	
-	system("cls");
+//	system("cls");
 	preencher(); // Preencher para mostrar ganhador;
 	
 	if(verifica() != 'v'){ // Diferente de empate;
@@ -83,14 +83,14 @@ void start(void){
 
 void preencher(){
 	
-	int i, j; // Variáveis para loop;
+	int i, j; // VariÃ¡veis para loop;
 	
 	printf("\t\t\t==================================================\n");
 	printf("\t\t\t=                                                =\n");
 	printf("\t\t\t=                   JOGO DA VELHA                =\n");
 	printf("\t\t\t=                                                =\n");
-    printf("\t\t\t==================================================\n");
-    printf("\t\t\t=                                                =\n"); // Mostrando opï¿½ï¿½es;
+	printf("\t\t\t==================================================\n");
+	printf("\t\t\t=                                                =\n"); // Mostrando opï¿½ï¿½es;
 	printf("\t\t\t==================================================\n");
 	printf("\t\t\t=                                                =\n");
 	
@@ -98,7 +98,7 @@ void preencher(){
 		printf("\t\t\t=\t      ------------------------\t         =\n");
 		printf("\t\t\t=\t    ");
 		for(j=0; j < 3; j++){
-			printf("   |   %c", preen[j+i*3]); // Motra espaços e X ou O;
+			printf("   |   %c", preen[j+i*3]); // Motra espaÃ§os e X ou O;
 		}
 		printf("  |\t         =\n");
 		printf("\t\t\t=\t      ------------------------\t         =\n");
@@ -108,13 +108,13 @@ void preencher(){
 
 char verifica(){
 		
-	// Sequências de vitóias; 
+	// Sequencias de vitÃ³rias 
 	int seq[][3] = {{0, 1, 2},{3, 4, 5},{6, 7, 8},{0, 3, 6},{1, 4, 7},{2,5,8},{0, 4, 8},{2, 4, 6}};
 	
 	int i; // Var para loop;
-	for(i = 0; i < 8; i++){ // Loop para verificar se há ganhador;
+	for(i = 0; i < 8; i++){ // Loop para verificar se hÃ¡ ganhador;
 	
-		// verificação dos espaços - Verificando igualdades nos espaços possiveis;
+		// verificÃ£o dos espacos - Verificando igualdades nos espaÃ§os possiveis;
 		if(preen[seq[i][0]] == preen[seq[i][1]] && preen[seq[i][0]] == preen[seq[i][2]]) return preen[seq[i][0]];
 	}
 	
@@ -124,9 +124,8 @@ char verifica(){
 			cont++; // +1 para cada jogada;
 		}
 		
-	}if(cont == 9){ // Se jogadas 9 e não há ganhador;
+	}if(cont == 9){ // Se jogadas 9 e nÃ£o hÃ¡ ganhador;
 		return 'v'; // Retorna v == VELHA;
 	}
 	return 'c';
 }
-

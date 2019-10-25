@@ -1,7 +1,7 @@
 
 void menu_jogos(void){ // Menu de jogos;
 
-    	system("cls");
+//    	system("cls");
 
     	// Declaração das variáveis;
     	int jogo;

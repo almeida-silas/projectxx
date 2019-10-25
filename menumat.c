@@ -1,7 +1,7 @@
 
 void jogom(void){ // Jogo da matemática;
 
-		system("cls"); // Limpa tela;
+//		system("cls"); // Limpa tela;
 
 		// Declaração das variáveis;
 		int escolha;

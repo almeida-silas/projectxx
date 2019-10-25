@@ -20,7 +20,7 @@ void cadast(void){ // Cadastro;
 
     	if(tamanho > 4){ // Condição para cadastro;
 
-    	    system("cls");
+//    	    system("cls");
 
             // Encerramento dos loops;
         	loop = 1;

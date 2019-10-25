@@ -11,7 +11,7 @@ void fase1 (void){ // Fase 1 do jogom;
     int resposta = 0, resposta_c = 0;
     char voltar; char layout(int fase);
 
-    system("cls");
+//    system("cls");
 
     layout(1); // Mostrando Layout|Enfeite;
 

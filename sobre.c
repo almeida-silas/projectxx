@@ -1,25 +1,23 @@
 
-void sobre(void){ // InformaÁıes para usu·rio;
+void sobre(void) { // Informa√ß√µes para usu√°rio;
 
-	// DeclaraÁ„o das vari·veis;
+	// Declara√ß√£o da vari√°vel;
 	int voltar;
 
-	system("cls");
-	// SaÌda de dados - Mostrando layout do sobre;
+//	system("cls" || "clear");
+	// Sa√≠da de dados - Mostrando layout do sobre;
 	printf("\t\t\t==================================================\n");
-	printf("\t\t\t=       ----- | Equipe de criaÁ„o |-----         =\n");
+	printf("\t\t\t=       ----- | Equipe de cria√ß√£o |-----         =\n");
 	printf("\t\t\t==================================================\n");
-	printf("\n\n\t\t\t | Danilo\n\n\t\t\t | Gutembergue\n\n\t\t\t | Paulo\n\n\t\t\t | Silas\n\n\t\t\t | Tiago\n\n"); //SaÌda de dados - Mostra dados;
+	printf("\n\n\t\t\t | Silas Almeida\n\n\t\t\t"); //Sa√≠da de dados - Mostra dados;
 
     // Entrada de dados;
 	printf("\n\t\t\t\t\t\t\t     | 0 - Voltar  | ");
-	scanf("%i", &voltar); // Entrada de dados - OpÁ„o para Voltar;
+	scanf("%i", &voltar); // Entrada de dados - Op√ß√£o para Voltar;
 
-	if(voltar == 0)
-	{
+	if(voltar == 0) {
 		main(); // Volta ao menu principal;
-	}else{
-			sobre(); // Entra em sobre novamente;
-		}
-		return;
+	} else {
+	    sobre(); // Entra em sobre novamente;
+	}
 }

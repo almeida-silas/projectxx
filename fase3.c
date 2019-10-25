@@ -15,7 +15,7 @@ void fase3 (void){ // Fase 3 do jogom;
     aux = -4*(varA*varC);
     delta = (varB*varB)+aux;
 
-    system("cls");
+//    system("cls");
 
     layout(3); // Mostrando layout|Enfeite;
 

@@ -2,7 +2,7 @@
 void dicas(void){
 	
 	int voltar;
-	system("cls");
+//	system("cls");
 	// Saída de dados;
 	printf("\t\t\t==================================================\n");
     printf("\t\t\t=                                                =\n");

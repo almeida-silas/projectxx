@@ -17,7 +17,7 @@ void jogof(){
 	int i, j;
 	char resp; int jogadas= 0;
 
-	system("cls");
+//	system("cls");
 	montar();
 	printf("\t\t\t Este jogo é para dois jogadores\n\n"); // Mensagem de informação ao usuário;
   
@@ -103,7 +103,7 @@ void jogof(){
 			}				
 		}
 	}
-	system("cls");
+//	system("cls");
 	montar();
 	vida = 8; // Para resetar jogo;
 	printf("\n\t\t\t  Perdeu!! :( \n\t\t\t  A palavra era [ %s ] \n", pala); // Mostra derrota;
